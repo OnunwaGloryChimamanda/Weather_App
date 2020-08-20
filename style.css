@@ -1,0 +1,276 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Gothan Rounded', sans-serif;
+}
+
+
+body {
+    background: linear-gradient(to right, rgb(4, 155, 255), rgb(184, 226, 243));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 90%;
+    width: 1200px;
+    background-color: white;
+    /*box-shadow: x-direction y-direction how_much_it_spreads_out shadow_color*/ 
+    box-shadow: 0 5px 10px black;
+    border-radius: 5px;/*for rounded corners*/
+}
+
+
+.content {
+    padding: 40px;
+    margin-top: 50px;
+}
+
+
+.header {
+    background-color: #222;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-top-left-radius:5px ;
+    border-top-right-radius: 5px;
+
+}
+
+
+.icon-container {
+    position: relative;
+    top: 80px;
+    padding: 20px;
+    background-color:darkcyan;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.general-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+}
+
+
+.status {
+    font-size: 3rem;
+    font-weight: bold;    
+}
+
+
+.location {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-top: 10px;    
+}
+
+
+.detail-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    /*order: 0;*/
+    align-items: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+
+.detail.bordered {
+    border-left: 1px solid #777;
+    border-right: 1px solid #777;
+}
+
+
+.detail .title {
+    font-size: 2rem;
+    flex-grow: 1;
+    font-weight: bold;
+    color: #777;
+}
+
+
+.detail .value {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+
+.city-search-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.city-search {
+    margin-top: 40px;
+    font-size: 2rem;
+    outline: none;
+    border: 1px solid #777;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.city-search-btn {
+    margin-top: 10px;
+    font-size: 2rem;
+    outline: none;
+    border: 1px solid #777;
+    border-radius: 5px;
+    padding: 5px 7px;
+    width: 100%;
+}
+
+.city-search-btn :hover {
+    color: darkcyan;
+}
+
+.openweather-logo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #333;
+    font-size: 1.5rem;
+    display: none;
+    visibility: hidden;
+}
+
+
+@media screen and (max-width: 670px) {
+    body {
+        background:  rgb(4, 155, 255);
+    }
+}
+
+
+@media screen and (max-width: 672px) {
+    body {
+        background:  rgb(4, 155, 255);
+    }
+
+    .detail .title {
+        font-size: 1rem;
+    }
+
+    .detail .value {
+        font-size: 1rem;
+    }
+
+    .city-search {
+        font-size: 1rem;
+    }
+
+    .city-search-btn {
+        font-size: 1rem;
+    }
+
+}
+
+
+@media screen and (max-width: 415px) {
+    body {
+        background:  rgb(4, 155, 255);
+    }
+
+   /* .detail {
+        display: run-in;
+    }*/
+
+    /*.detail .title {
+        display:block ;
+        visibility: visible;
+    }
+
+    .detail .value {
+        display:block ;
+        visibility: visible;
+    }
+
+    .detail.bordered {
+      display: block;
+      visibility: visible;
+    }
+
+    .openweather-logo {
+        display: none;
+        visibility: hidden;
+    }*/
+}
+
+
+@media screen and (width: 450px) {
+    body {
+        background:  rgb(4, 155, 255);
+    }
+
+    .openweather-logo {
+        display: none;
+        visibility: hidden;
+    }
+
+}
+
+
+@media screen and (max-width: 373px) {
+    body {
+        background:  rgb(4, 155, 255);
+    }
+
+    .city-search {
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 431px) {
+
+    body {
+        background:  rgb(4, 155, 255);
+    }
+
+    .city-search {
+        font-size: 1rem;
+    }
+
+    .detail-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .detail.bordered {
+        border-top: 1px solid #777;
+        border-bottom: 1px solid #777;
+        border-left: none;
+        border-right: none;
+    }
+
+}
+
+@media screen and (max-width: 229px) {
+    .status {
+        font-size: 2rem;
+    }
+
+    .location {
+        font-size: 1rem;
+    }
+}
