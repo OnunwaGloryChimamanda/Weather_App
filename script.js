@@ -10,7 +10,7 @@ function getSearchMethod(searchTerm){
 }
 function searchWeather(searchTerm) {
     getSearchMethod(searchTerm);
-    fetch(`http://api.openweathermap.org/data/2.5/weather?${searchmethod}=${searchTerm}&appid=${appid}&units=${units}`).then(result => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?${searchmethod}=${searchTerm}&appid=${appid}&units=${units}`).then(result => {
         return result.json();
     }).then(result => {
         check(result);
