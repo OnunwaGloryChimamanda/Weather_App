@@ -52,6 +52,10 @@ body {
     border-radius: 50%;
 }
 
+.icon_img {
+    border-radius: 50%;
+}
+
 .general-information {
     display: flex;
     flex-direction: column;
@@ -130,6 +134,7 @@ body {
 }
 
 .city-search-btn {
+    transition-duration: 0.4s;
     margin-top: 10px;
     font-size: 2rem;
     outline: none;
@@ -139,8 +144,9 @@ body {
     width: 100%;
 }
 
-.city-search-btn :hover {
-    color: darkcyan;
+.city-search-btn:hover {
+    background-color: darkcyan;
+    color: white;
 }
 
 .openweather-logo {

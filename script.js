@@ -10,7 +10,7 @@ function getSearchMethod(searchTerm){
 }
 function searchWeather(searchTerm) {
     getSearchMethod(searchTerm);
-    fetch(`http://api.openweathermap.org/data/2.5/weather?${searchmethod}=${searchTerm}&appid=${appid}&units=${units}`).then(result => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?${searchmethod}=${searchTerm}&appid=${appid}&units=${units}`).then(result => {
         return result.json();
     }).then(result => {
         check(result);
@@ -68,6 +68,9 @@ function checkValidityOfCity(resultFromServer){
     let ewindSpeed = document.getElementById('wind-speed');
     let etemperature = document.getElementById('temperature');
     let ehumidity = document.getElementById('humidity');
+    let eicon = document.getElementById('icon');
+
+    eicon.src='img/default_icon.jpg'
 
     let errorDescription = '';
     edescription.innerText = errorDescription;
@@ -80,6 +83,8 @@ function checkValidityOfCity(resultFromServer){
 
     let errorHumidity = '';
     ehumidity.innerText = errorHumidity;
+
+
 
       //console.log('invalid city');
 }
