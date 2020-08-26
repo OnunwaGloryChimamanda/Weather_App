@@ -39,6 +39,9 @@ function init(resultFromServer){
 
    icon.src = 'https://openweathermap.org/img/wn/' + resultFromServer.weather[0].icon + '.png';
    //console.log(icon.src);
+
+   locationName.href = `https://www.tripadvisor.com/Search?q=${resultFromServer.name}`;
+   console.log(locationName.href);
    
 
    let resultDescription = resultFromServer.weather[0].description;
@@ -60,14 +63,16 @@ function init(resultFromServer){
 }
 
 function checkValidityOfCity(resultFromServer){
-    let locationName = document.getElementById('location-name');
+    let elocationName = document.getElementById('location-name');
     let errorMessage = 'Please enter a valid city e.g Lagos or zip code';
-    locationName.innerText = errorMessage; 
+    elocationName.innerText = errorMessage; 
+    elocationName.href = ``;
 
     let edescription = document.getElementById('description');
     let ewindSpeed = document.getElementById('wind-speed');
     let etemperature = document.getElementById('temperature');
     let ehumidity = document.getElementById('humidity');
+
     let eicon = document.getElementById('icon');
 
     eicon.src='img/default_icon.jpg'
